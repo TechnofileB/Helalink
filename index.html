@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Business</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <nav>
+      <h1 class="logo">Making Money Online is real <br>Connecting you to value</h1>
+      <!-- Hamburger button -->
+      <button class="menu-toggle" aria-label="Toggle Menu">☰</button>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faqs">Questions</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>Welcome to Helalink Agencies...<br>Your Trusted platform sponsored by BestTech Management</h2>
+      <p>Smart solutions tailored to your needs.</p>
+      <a href="https://wa.me/254796761924?text=Hello%20I%20am%20interested%20in%20Helalink%20services" target="_blank" class="whatsapp-btn">
+        Chat on WhatsApp
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <h2>About Helalink</h2>
+    <p>
+      Helalink Agencies is more than just an affiliate marketing brand—we are your trusted partner in making smart buying decisions.
+      <br><br>
+      ✨ To connect people with genuine products, reliable services, and deals that truly add value.
+      <br><br>
+      Every recommendation you see here has been researched, reviewed, and chosen with care. Our promise is to guide you toward smarter shopping, so you spend less time searching and more time enjoying.
+    </p>
+  </section>
+
+  <!-- Services Section -->
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services-container">
+    <div class="service">
+      <h3>Affiliate Marketing</h3>
+      <p>We connect you with the best deals and genuine products to maximize your earnings.</p>
+    </div>
+    <div class="service">
+      <h3>Consultation</h3>
+      <p>Get expert guidance on making smart investments and exploring business opportunities.</p>
+    </div>
+    <div class="service">
+      <h3>Customer Support</h3>
+      <p>Enjoy 24/7 support to ensure your journey with Helalink is smooth and successful.</p>
+    </div>
+  </div>
+</section>
+
+
+  <!-- FAQs Section -->
+  <section id="faqs">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <button class="faq-question">How can I register?</button>
+      <div class="faq-answer">
+        Click the link, enter the required details, and access your account:  
+        <a href="https://Helalink.com/register.php?ref=Bosske" target="_blank" class="btn-link">Click here</a>
+      </div>
+    </div>
+    <div class="faq">
+      <button class="faq-question">How can I learn more?</button>
+      <div class="faq-answer">
+        To learn more, reach me out by clicking the WhatsApp icon in this website and it will redirect you to my inbox for more information.
+      </div>
+    </div>
+    <div class="faq">
+      <button class="faq-question">Ways of earning?</button>
+      <div class="faq-answer">
+        🚡🚀 Do Spins and get paid<br>
+        ☀📈 Clicking ads and get paid<br>
+        🎁 Watch YouTube videos and get paid<br>
+        📝 Answer trivia questions and get paid<br>
+        🎮 Play Games and get paid<br>
+        🤝 Refer people and get paid
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Our Gallery</h2>
+    <div class="gallery-container">
+      <img src="pics/hela1.jpg" alt="Office">
+      <img src="pics/hela2.jpg" alt="Team">
+      <img src="pics/hela3.jpg" alt="Business">
+      <img src="pics/hela4.jpg" alt="Success">
+      <img src="pics/hela5.jpg" alt="Meeting">
+      <img src="pics/hela6.jpg" alt="Technology">
+    </div>
+
+    <!-- Modal for image preview -->
+    <div id="modal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="modalImg">
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Click below to chat with us directly on WhatsApp 👇</p>
+    <a href="https://wa.me/254796761924?text=Hello%20I%20am%20interested%20in%20Helalink%20services" target="_blank" class="whatsapp-btn">
+      Message on WhatsApp
+    </a>
+  </section>
+
+  <!-- Call-to-Action Section -->
+<section class="cta">
+  <h2>Ready to Get Started?</h2>
+  <p>Join Helalink today and start your journey to smart deals and extra income.</p>
+  <a href="https://wa.me/254796761924?text=I%20want%20to%20join%20Helalink" 
+     target="_blank" class="whatsapp-btn">Join Now</a>
+</section>
+
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Helalink Agencies | All Rights Reserved</p>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/254796761924?text=Hello%20I%20am%20interested%20in%20Helalink%20services" 
+     class="floating-whatsapp" target="_blank" title="Chat with us on WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp Logo">
+  </a>
+
+  <!-- JavaScript -->
+  <script>
+    // FAQ toggle
+    const faqs = document.querySelectorAll(".faq-question");
+    faqs.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const answer = btn.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+      });
+    });
+
+    // Gallery modal
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modalImg");
+    const closeBtn = document.querySelector(".close");
+
+    document.querySelectorAll(".gallery-container img").forEach(img => {
+      img.addEventListener("click", () => {
+        modal.style.display = "flex";
+        modalImg.src = img.src;
+      });
+    });
+
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Mobile menu toggle
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navMenu = document.querySelector("nav ul");
+
+    menuToggle.addEventListener("click", () => {
+      navMenu.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

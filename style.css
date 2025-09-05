@@ -1,0 +1,387 @@
+body {
+  line-height: 1.6;
+  color: #fff; /* white text so it’s visible */
+  position: relative;
+  background: url("pics/biz/hela7.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
+/* Header & Navigation */
+header {
+  background: #0073e6;
+  color: #fff;
+  padding: 15px 30px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #ffdd57;
+}
+
+/* Hamburger menu button */
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: url("https://source.unsplash.com/1600x600/?business,office") center/cover no-repeat;
+  color: #fff;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.5);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background: #25d366;
+  color: #fff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.whatsapp-btn:hover {
+  background: #1eb346;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #0073e6;
+}
+
+/* FAQs */
+.faq {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.faq-question {
+  width: 100%;
+  padding: 15px;
+  background: #0073e6;
+  color: white;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.faq-question:hover {
+  background: #005bb5;
+}
+
+.faq-answer {
+  display: none;
+  padding: 15px;
+  background: #f4f4f4;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+/* Gallery */
+#gallery {
+  background: #f9f9f9;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.gallery-container img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.gallery-container img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  font-size: 40px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Floating WhatsApp Button */
+.floating-whatsapp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25d366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  z-index: 3000;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.floating-whatsapp img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+.floating-whatsapp:hover {
+  background: #1eb346;
+  transform: scale(1.1);
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px 10px;
+  margin-top: 40px;
+  font-size: 0.9rem;
+}
+
+/* General Links */
+a {
+  color: #0073e6;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #005bb5;
+}
+
+/* Button-style Links */
+.btn-link {
+  display: inline-block;
+  padding: 8px 15px;
+  background: #0073e6;
+  color: #fff !important;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.btn-link:hover {
+  background: #005bb5;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-toggle {
+    display: block;
+    margin-top: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    margin-top: 10px;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+
+  .gallery-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  nav .logo {
+    font-size: 1.2rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  .whatsapp-btn {
+    padding: 10px 18px;
+    font-size: 0.9rem;
+  }
+}
+/* Services Section */
+#services {
+  background: #f9f9f9;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.service {
+  background: #0073e6;
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+/* Call-to-Action Section */
+.cta {
+  background: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  margin: 40px auto;
+  border-radius: 10px;
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.cta p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
